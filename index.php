@@ -51,7 +51,7 @@
                     </li>
                    
                 </ul>
-                <span class="navbar-text col text-center">Welcome Choice your Room</span>
+                <span class="navbar-text col text-center">Welcome!!Choice your Room</span>
                 <form class="d-flex">
                     <input onkeyup="search(this.value)" class="form-control " type="text"
                         placeholder="Search anything here">
