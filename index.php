@@ -51,7 +51,7 @@
                     </li>
                    
                 </ul>
-                <span class="navbar-text col text-center">Welcome to Smart Reservation Parking System</span>
+                <span class="navbar-text col text-center">Welcome Choice your Room</span>
                 <form class="d-flex">
                     <input onkeyup="search(this.value)" class="form-control " type="text"
                         placeholder="Search anything here">
@@ -63,15 +63,15 @@
     </nav>
     
     <div class="container-fluid mb-5">
-        <p class="h1 mt-2">Smart Parking System</p>
-        <p class="mt-2">You can Park your car for safety and avoid carjacking</p>
+        <p class="h1 mt-2">Room Manangement</p>
+        <p class="mt-2">You can choice your Room Above</p>
         <div class="card mt-2">
-            <div class="card-header" style="text-align : center;"><-----List of Guest-----></div>
+            <div class="card-header" style="text-align : center;"><-----List of Room-----></div>
             <div class="card-body"> <strong> </strong>
                 <table class="table table-bordered table-hover" ;>
                     <thead>
                         <tr>
-                            <th width="100" style="text-align : center;">Guest Id</th>
+                            <th width="100" style="text-align : center;">Room Id</th>
                             <th style="text-align: left; padding-left: 10px">Name</th>
                             <th width="130">Details</th>
                         </tr>
@@ -81,7 +81,7 @@
 
                                 
                                     <div class="modal-header">
-                                        <h4 class="modal-title">Guest Details</h4>
+                                        <h4 class="modal-title">Roomt Details</h4>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
 
@@ -108,7 +108,7 @@
             </tbody>
             </table>
         </div>
-        <div class="card-footer">This are all the List of Guest Park thier car to our Smart Parking System </div>
+        <div class="card-footer">This are all the List of Rooms</div>
     </div>
    
 
