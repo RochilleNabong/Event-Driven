@@ -176,6 +176,47 @@
                     <!-- Gmail -->
 
                 </div>
+                <?php
+                include "./config/database.php";
+
+                ?>
+
+                <!-- Address -->
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                    <br>
+                    </div>
+                    <div class="col-md-3">
+                        <label>Region :<b class="text-danger">*</b></label>
+                        <select name="inp_region" id="inp_region" onchange="display_province(this.value)" required class="form-control mt-2">
+                        <option value="" disabled selected >--SELECT REGION--</option>
+                    <?php
+                     $sql = "SELECT * FROM ph_region";
+                     $result = $conn->query($sql);
+         
+                     if ($result->num_rows > 0) {
+                 // output data of each row
+                     while($row = $result->fetch_assoc()) {
+                    ?>
+                    <option value="<?= $row["regCode"] ?>"><?= $row ["regDesc"] ?></option>
+                    <?php
+                  }
+                     } else {
+                     echo "0 results";
+                     }
+                     $conn->close();
+                     ?>   
+                    </select>
+
+                    </div>
+                    <div class="col-md-3">
+                        <label>PROVINCE : <b class="text-danger">*</b></label>
+                        <select name="inp_province" id="inp_province" required class="form-control mt-2">
+                        <option value="" disabled selected >--SELECT PROVINCE--</option>
+                    </select>
+
+                    </div>
+                </div>
 
                 <!-- Modal footer -->
                 <div class="card-footer">
@@ -183,16 +224,30 @@
                     <button class="btn btn-success">
                         Register Now!!
                     </button>
-
-
                 </div>
-
             </div>
-    </div>
+        </div>
 
     <!-- For Text/Typography Buttom-->
 
 </body>
+
+<script>
+    function display_province(regCode){
+        
+    $.ajax({
+    
+    url: './model/address.php', 
+    type: 'POST', 
+    data: { 'type' : 'region', 'past_Code' : regCode }, 
+    success: function(response){
+        $('#inp_province').html(response); 
+    }
+    });
+    }
+    
+</script>
+
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>

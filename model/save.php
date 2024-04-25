@@ -9,6 +9,7 @@ $registration = array(
     'Address' => "'" . $_POST['inp_Address'] . "'",
     'Contact_Num' => "'" . $_POST['inp_Contact_Num'] . "'",
     'Gender' => "'" . $_POST['inp_Gender'] . "'",
+    
 );
 save($registration);
 function save($data)
